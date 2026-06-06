@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPUNTIA</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body class="bg-[#F5EFDD] font-['Lato']">
+    
+<header class="bg-[#51603A] p-5">        
+<nav class="flex flex-col items-center text-white">
+    <div class="flex-shrink-0 pb-3">
+        <img class="hover:scale-105 transition-transform h-40" src="img/logo.png" alt="Logo">
+    </div>
+    <ul class="flex flex-wrap justify-center gap-3">
+        <li class="hover:scale-105 transition duration-500"><a class="p-2 hover:scale-105 hover:bg-[#F5EFDD] hover:text-black xl:text-2xl" href="index.html">INICIO</a></li>
+        <li class="hover:scale-105 transition duration-500"><a class="p-2 hover:scale-105 hover:bg-[#F5EFDD] hover:text-black xl:text-2xl" href="productos.html">PRODUCTOS</a></li>
+        <li class="hover:scale-105 transition duration-500"><a class="p-2 hover:scale-105 hover:bg-[#F5EFDD] hover:text-black xl:text-2xl" href="contacto.html">CONTACTO</a></li>
+        <li class="hover:scale-105 transition duration-500"><a class="p-2 hover:scale-105 hover:bg-[#F5EFDD] hover:text-black xl:text-2xl" href="#">QUIENES SOMOS</a></li>
+    </ul>
+</nav>
+</header>
+
+<div class="relative w-full overflow-hidden rounded-lg">
+ 
+    <div id="carousel" class="flex transition-transform duration-500">
+        <img src="img/imagen1.jpg" class="w-full flex-shrink-0 aspect-[16/9]" alt="Imagen 1">
+        <img src="img/imagen2.png" class="w-full flex-shrink-0 aspect-[16/9]" alt="Imagen 2">
+        <img src="img/imagen3.jpg" class="w-full flex-shrink-0 aspect-[16/9]" alt="Imagen 3">
+    </div>
+
+    <button
+        onclick="prevSlide()"
+        class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-2 rounded">
+        ❮
+    </button>
+
+    <button
+        onclick="nextSlide()"
+        class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-2 rounded">
+        ❯
+    </button>
+
+</div>
+<div class="grid md:grid-cols-2 xl:grid-cols-3  gap-4 mt-5">
+    <div class="text-xl text-center py-5 px-1 bg-black/5 rounded-sm">
+        <h1>💬ATENCION PERSONALIZADA💬</h1>
+        <p>Contactanos por whatsapp y asesorate de manera sencilla y gratis</p>
+    </div>
+    <div class="text-xl text-center py-5 px-1 bg-black/5 rounded-sm">
+        <h1>🌱CONOCIMIENTO EN EL AREA🌱</h1>
+        <p>Contamos con técnicos especializados en hierbas e infusiones</p>
+    </div>
+    <div class="text-xl text-center py-5 px-1 bg-black/5 md:col-span-2 xl:col-span-1">
+        <h1>♻️ENVASE REUTILIZABLE♻️</h1>
+        <p>Trae tu envase y te hacemos un descuento en tu compra!</p>
+    </div>
+</div>
+
+
+<section class="bg-[#7C748D] p-20 mt-5 text-white">
+    <h1 class="text-2xl font-bold text-center mb-10">NUESTROS PRODUCTOS</h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 justify-items-center items-center gap-5">
+        <div class="inline-block text-center hover:scale-105 transition-transform p-1 bg-black/10 rounded-sm">
+            <a href="pcedron.html">
+            <img class="mx-auto w-64 h-48 object-cover rounded-sm xl:max-h-100" src="img/cedron.jpg" alt="Cedrón">
+            <h1 class="mt-2 text-lg">CEDRÓN</h1>
+            <p>Hojas aromáticas ideales para infusiones refrescantes, mates y preparaciones naturales.</p>
+            </a>
+        </div>
+        <div class="inline-block text-center hover:scale-105 transition-transform p-1 bg-black/10 rounded-sm">
+            <a href="pchinchil.html">
+            <img class="mx-auto w-64 h-48 object-cover rounded-sm xl:max-h-100" src="img/chinchil.jpg" alt="Chinchil">
+            <h1 class="mt-2 text-lg">CHINCHIL</h1>
+            <p>Hierba seleccionada y deshidratada cuidadosamente para conservar su aroma</p>
+            </a>
+        </div>
+        <div class="inline-block text-center hover:scale-105 transition-transform p-1 bg-black/10 rounded-sm">
+            <a href="pmanzanilla.html">
+            <img class="mx-auto w-64 h-48 object-cover rounded-sm xl:max-h-100" src="img/manzanilla.png" alt="Manzanilla">
+            <h1 class="mt-2 text-lg">MANZANILLA</h1>
+            <p>Blend artesanal de hierbas naturales pensado para acompañar tu mate diario.</p>
+            </a>
+        </div>
+        <div class="inline-block text-center hover:scale-105 transition-transform p-1 bg-black/10 rounded-lg">
+            <a href="prosas.html">
+                <img class="mx-auto w-64 h-48 object-cover rounded-sm xl:max-h-100" src="img/rosamosqueta.png" alt="Rosa Mosqueta">
+                <h1 class="mt-2 text-lg">ROSA MOSQUETA</h1>
+                <p>Menta de alta calidad con aroma intenso y sabor fresco para infusiones y blends.</p>
+            </a>
+        </div>
+    </div>
+    <div class="flex justify-center">
+            <a href="productos.html"
+            class="relative overflow-hidden border border-black px-8 py-4 group mt-5">
+                <span class="absolute inset-y-0 left-0 w-0 bg-[#7858BD] transition-all duration-500 ease-out group-hover:w-full">
+</span>
+                <span class="relative z-10 transition-colors duration-100 text-lg group-hover:text-white">
+                    VER PRODUCTOS
+                </span>
+            </a>
+    </div>
+</section>
+<section class="mt-10 p-5 mb-10">
+<div class="text-center">
+    <h1 class="text-2xl">
+        IDEAS DE PREPARACION
+    </h1>
+    <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-4 mt-5">
+    
+<button onclick="showRecipe('menta')" class="group relative overflow-hidden rounded-xl bg-black/5 py-5 px-4 text-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:bg-[#7C748D]/50">
+    <span class="absolute top-0 -left-1/2 h-full w-1/3 skew-x-12 bg-gradient-to-r from-transparent via-white/100 to-transparent transition-all duration-700 group-hover:left-[140%]"></span>
+    <span class="relative z-10 transition-colors duration-500 group-hover:text-white">Menta Refrescante</span>
+</button>
+
+<button onclick="showRecipe('citrico')" class="group relative overflow-hidden rounded-xl bg-black/5 py-5 px-4 text-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:bg-[#7C748D]/50">
+    <span class="absolute top-0 -left-1/2 h-full w-1/3 skew-x-12 bg-gradient-to-r from-transparent via-white/100 to-transparent transition-all duration-700 group-hover:left-[140%]"></span>
+    <span class="relative z-10 transition-colors duration-500 group-hover:text-white">Mate Cítrico</span>
+</button>
+
+<button onclick="showRecipe('relax')" class="group relative overflow-hidden rounded-xl bg-black/5 py-5 px-4 text-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:bg-[#7C748D]/50">
+    <span class="absolute top-0 -left-1/2 h-full w-1/3 skew-x-12 bg-gradient-to-r from-transparent via-white/100 to-transparent transition-all duration-700 group-hover:left-[140%]"></span>
+    <span class="relative z-10 transition-colors duration-500 group-hover:text-white">Infusión Relax</span>
+</button>
+
+<button onclick="showRecipe('digestivo')" class="group relative overflow-hidden rounded-xl bg-black/5 py-5 px-4 text-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:bg-[#7C748D]/50">
+    <span class="absolute top-0 -left-1/2 h-full w-1/3 skew-x-12 bg-gradient-to-r from-transparent via-white/100 to-transparent transition-all duration-700 group-hover:left-[140%]"></span>
+    <span class="relative z-10 transition-colors duration-500 group-hover:text-white">Blend Digestivo</span>
+</button>
+</div>
+
+<!-- MODAL -->
+<div id="modal"
+    class="hidden fixed inset-0 bg-black/50 z-50 items-center justify-center">
+    <div id="modalContent"
+        class="bg-white text-black rounded-xl p-6 max-w-lg mx-4 relative shadow-2xl
+               opacity-0 scale-95 translate-y-4 transition-all duration-300">
+
+        <button onclick="closeModal()"
+            class="absolute top-3 right-4 text-2xl font-bold hover:text-red-500 transition">
+            ×
+        </button>
+        
+        <h2 id="recipeTitle" class="text-2xl font-bold mb-4"></h2>
+        <div id="recipeContent"></div>
+        
+    </div>
+</div>
+</div>
+</section>
+<footer>
+    <div class="bg-[#51603A] text-white text-center p-5 mt-5">
+        <p>© 2026 OPUNTIA. Todos los derechos reservados.</p>
+        <div>
+            <a href="https://instagram.com/opuntia.plantas.bienestar" target="_blank" class="inline-flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-white/10 transition-all duration-300">
+                <i class="fa-brands fa-instagram text-3xl"></i>
+                <span class="font-medium">INSTAGRAM</span>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<script>
+let currentSlide = 0;
+const carousel = document.getElementById('carousel');
+const totalSlides = 3;
+
+function updateCarousel() {
+    carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    updateCarousel();
+}
+
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    updateCarousel();
+}
+setInterval(() => {
+    nextSlide();
+}, 5000); // tiempo en que cambia de imagen (milisegundos)
+
+const recipes = {
+
+    menta: {
+        title: "🌿 Menta Refrescante",
+        content: `
+            <h3 class="font-bold mb-2">Ingredientes</h3>
+            <ul class="list-disc ml-5 mb-4">
+                <li>1 cucharada de menta</li>
+                <li>Agua caliente (80°C)</li>
+                <li>Miel opcional</li>
+            </ul>
+
+            <h3 class="font-bold mb-2">Preparación</h3>
+            <p>
+                Agregar la menta al mate o preparar una infusión.
+                Ideal para disfrutar de una sensación fresca y aromática.
+            </p>
+        `
+    },
+
+    citrico: {
+        title: "🍋 Mate Cítrico",
+        content: `
+            <h3 class="font-bold mb-2">Ingredientes</h3>
+            <ul class="list-disc ml-5 mb-4">
+                <li>Yerba mate</li>
+                <li>Cáscara de limón o naranja</li>
+                <li>Hojas de menta</li>
+            </ul>
+
+            <h3 class="font-bold mb-2">Preparación</h3>
+            <p>
+                Mezclar las hierbas con la yerba mate y cebar normalmente.
+                Obtendrás un mate fresco y con notas cítricas.
+            </p>
+        `
+    },
+
+    relax: {
+        title: "🌼 Infusión Relax",
+        content: `
+            <h3 class="font-bold mb-2">Ingredientes</h3>
+            <ul class="list-disc ml-5 mb-4">
+                <li>Manzanilla</li>
+                <li>Melisa</li>
+                <li>Cedrón</li>
+            </ul>
+
+            <h3 class="font-bold mb-2">Preparación</h3>
+            <p>
+                Colocar las hierbas en agua caliente y dejar reposar
+                durante 5 minutos. Ideal para momentos de descanso.
+            </p>
+        `
+    },
+
+    digestivo: {
+        title: "🌱 Blend Digestivo",
+        content: `
+            <h3 class="font-bold mb-2">Ingredientes</h3>
+            <ul class="list-disc ml-5 mb-4">
+                <li>Menta</li>
+                <li>Poleo</li>
+                <li>Burrito</li>
+            </ul>
+
+            <h3 class="font-bold mb-2">Preparación</h3>
+            <p>
+                Mezclar las hierbas con la yerba mate o preparar una infusión.
+                Ideal para acompañar después de las comidas.
+            </p>
+        `
+    }
+
+};
+
+function showRecipe(recipe) {
+
+    document.getElementById("recipeTitle").innerHTML =
+        recipes[recipe].title;
+
+    document.getElementById("recipeContent").innerHTML =
+        recipes[recipe].content;
+
+    const modal = document.getElementById("modal");
+    const content = document.getElementById("modalContent");
+
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+
+    setTimeout(() => {
+        content.classList.remove("opacity-0", "scale-95", "translate-y-4");
+        content.classList.add("opacity-100", "scale-100", "translate-y-0");
+    }, 10);
+}
+
+function closeModal() {
+
+    const modal = document.getElementById("modal");
+    const content = document.getElementById("modalContent");
+
+    content.classList.remove("opacity-100", "scale-100", "translate-y-0");
+    content.classList.add("opacity-0", "scale-95", "translate-y-4");
+
+    setTimeout(() => {
+        modal.classList.remove("flex");
+        modal.classList.add("hidden");
+    }, 300);
+}
+
+document.getElementById("modal").addEventListener("click", function (e) {
+
+    if (e.target === this) {
+        closeModal();
+    }
+
+});
+
+</script>
+</body>
+</html>
