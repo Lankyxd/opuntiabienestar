@@ -10,6 +10,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 </head>
 <body class="bg-[#F5EFDD] font-['Lato']">
     
@@ -19,31 +21,56 @@
         <img class="hover:scale-105 transition-transform h-40" src="img/logo.png" alt="Logo">
     </div>
     <ul class="flex flex-wrap justify-center gap-3">
-        <li class="hover:scale-105 transition duration-500"><a class="p-2 hover:scale-105 hover:bg-[#F5EFDD] hover:text-black xl:text-2xl" href="index.html">INICIO</a></li>
-        <li class="hover:scale-105 transition duration-500"><a class="p-2 hover:scale-105 hover:bg-[#F5EFDD] hover:text-black xl:text-2xl" href="productos.html">PRODUCTOS</a></li>
-        <li class="hover:scale-105 transition duration-500"><a class="p-2 hover:scale-105 hover:bg-[#F5EFDD] hover:text-black xl:text-2xl" href="contacto.html">CONTACTO</a></li>
-        <li class="hover:scale-105 transition duration-500"><a class="p-2 hover:scale-105 hover:bg-[#F5EFDD] hover:text-black xl:text-2xl" href="quienessomos.html">QUIENES SOMOS</a></li>
+        <li class="hover:scale-105 transition duration-500"><a class="p-2 hover:scale-105 hover:bg-[#F5EFDD] hover:text-black xl:text-xl" href="index.html">INICIO</a></li>
+        <li class="hover:scale-105 transition duration-500"><a class="p-2 hover:scale-105 hover:bg-[#F5EFDD] hover:text-black xl:text-xl" href="productos.html">PRODUCTOS</a></li>
+        <li class="hover:scale-105 transition duration-500"><a class="p-2 hover:scale-105 hover:bg-[#F5EFDD] hover:text-black xl:text-xl" href="contacto.html">CONTACTO</a></li>
+        <li class="hover:scale-105 transition duration-500"><a class="p-2 hover:scale-105 hover:bg-[#F5EFDD] hover:text-black xl:text-xl" href="quienessomos.html">QUIENES SOMOS</a></li>
     </ul>
 </nav>
 </header>
 
 <div class="relative w-full overflow-hidden rounded-lg">
- 
-    <div id="carousel" class="flex transition-transform duration-500">
-        <img src="img/imagen1.jpg" class="w-full flex-shrink-0 aspect-[16/9]" alt="Imagen 1">
-        <img src="img/imagen2.png" class="w-full flex-shrink-0 aspect-[16/9]" alt="Imagen 2">
-        <img src="img/imagen3.jpg" class="w-full flex-shrink-0 aspect-[16/9]" alt="Imagen 3">
+
+    <!-- Capa oscura -->
+    <div class="absolute inset-0 bg-black/30 z-10"></div>
+
+    <!-- Texto Hero -->
+    <div class="absolute inset-0 z-20 flex flex-col items-center justify-center text-center text-white px-6">
+        <h1
+    data-aos="fade-down"
+    data-aos-delay="100"
+    class="text-3xl md:text-5xl xl:text-6xl font-bold drop-shadow-lg">
+            La tradición de los yuyos en cada mate
+        </h1>
+
+        <p
+    data-aos="fade-up"
+    data-aos-delay="400"
+    class="mt-4 max-w-3xl text-sm md:text-lg xl:text-xl drop-shadow-lg">
+            Descubrí nuestra selección de hierbas y flores cuidadosamente elegidas,
+            inspiradas en las recetas y costumbres que han acompañado generaciones
+            de sanjuaninos.
+        </p>
     </div>
 
+    <!-- Carrusel -->
+    <div id="carousel" class="flex transition-transform duration-500">
+        <img src="img/imagen1.jpg" class="w-full flex-shrink-0 aspect-[16/9] object-cover" alt="Imagen 1">
+        <img src="img/imagen2.png" class="w-full flex-shrink-0 aspect-[16/9] object-cover" alt="Imagen 2">
+        <img src="img/imagen3.jpg" class="w-full flex-shrink-0 aspect-[16/9] object-cover" alt="Imagen 3">
+    </div>
+
+    <!-- Botón anterior -->
     <button
         onclick="prevSlide()"
-        class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-2 rounded">
+        class="absolute left-4 top-1/2 z-30 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white px-3 py-2 rounded-full transition">
         ❮
     </button>
 
+    <!-- Botón siguiente -->
     <button
         onclick="nextSlide()"
-        class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-2 rounded">
+        class="absolute right-4 top-1/2 z-30 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white px-3 py-2 rounded-full transition">
         ❯
     </button>
 
@@ -196,13 +223,16 @@ setInterval(() => {
 const recipes = {
 
     checu: {
-        title: "CHECÚ",
+        title: "BLEND CHECÚ (Querer / Amar) — Receta ",
         content: `
+            <p class="font-bold">Perfil: Combina el color rojo intenso de la jamaica, el perfume de la canela, la cremosidad del coco y el cuerpo del té rojo para crear una experiencia de bienestar dulce, frutada y estimulante.</p>
             <h3 class="font-bold mb-2">Ingredientes</h3>
             <ul class="list-disc ml-5 mb-4">
-                <li>1 cucharada de menta</li>
-                <li>Agua caliente (80°C)</li>
-                <li>Miel opcional</li>
+                <li>Té Rojo (Aporta el cuerpo, la base de antioxidantes y astringencia suave)</li>
+                <li>Flor de Jamaica / Hibiscus:(El ingrediente estrella: aporta el color rojo rubí brillante y una acidez frutada única)</li>
+                <li>Escamas de Coco: Aportan la nota cremosa, el aroma dulce y el contraste visual blanco</li>
+                <li>Rosa Mosqueta: (Completa las notas críticas-frutadas y potencia el color)</li>
+                <li>Canela en rama: (Aporta el final especiado y cálido que amalgama el coco con la jamaica)</li>
             </ul>
 
             <h3 class="font-bold mb-2">Preparación</h3>
@@ -214,13 +244,16 @@ const recipes = {
     },
 
     xumec: {
-        title: "XUMEC",
+        title: "Blend XUMEC (Sol) — Receta",
         content: `
+        <p class="font-bold">Perfil: Cítrico, fresco, equilibrado y de tonos dorados muy vistosos.</p>
             <h3 class="font-bold mb-2">Ingredientes</h3>
             <ul class="list-disc ml-5 mb-4">
-                <li>Yerba mate</li>
-                <li>Cáscara de limón o naranja</li>
-                <li>Hojas de menta</li>
+                <li>Burro:Aporta la base herbácea principal y un perfil aromático marcadamente exótico, mentolado y fresco.</li>
+                <li>Cedrón: Aporta el núcleo cítrico dulce (debido a su alto contenido de citral). </li>
+                <li>Suaviza la robustez del burro y entrega un aroma limpio y relajante.</li>
+                <li>Caléndula: Es el aporte visual estrella. Sus pétalos aportan los destellos amarillos/anaranjados que hacen honor al nombre "Sol". En taza, aporta suavidad, untuosidad y sutiles notas florales astringentes.</li>
+                <li>Jazmín: Aporta el toque premium y sofisticado mediante su aroma floral penetrante y dulce. Amalgama las notas cítricas de las hojas con un perfume atrapante.</li>
             </ul>
 
             <h3 class="font-bold mb-2">Preparación</h3>
@@ -232,13 +265,16 @@ const recipes = {
     },
 
     teken: {
-        title: "TEKEN",
+        title: "TEKEN (Corazón) — Receta",
         content: `
+            <p class="font-bold"> Perfil: bomba de frescura autóctona y serrana, elegante y de gran equilibrio.</p>
             <h3 class="font-bold mb-2">Ingredientes</h3>
             <ul class="list-disc ml-5 mb-4">
-                <li>Manzanilla</li>
-                <li>Melisa</li>
-                <li>Cedrón</li>
+                <li>Chinchil: Aporta una nota súper exótica, dulce y penetrante que recuerda al anís con pinceladas cítricas y afrutadas (tipo mango/maracuyá maduro).</li>
+                <li>Muña Muña:Aporta un fondo intensamente balsámico, herbáceo y alcanforado, pero más dulce y menos agresivo que la menta común.</li>
+                <li>Incayuyo: Aporta el alma de la sierra. Tiene un perfil aromático leñoso, resinoso, intensamente herbal y sutilmente amargo al final.</li>
+                <li>Burro: Entrega un dulzor natural muy característico y un perfume mentolado fresco que recuerda al apio o la menta exótica.</li>
+                <li>Menta: El golpe de frescura. Aporta un perfil marcadamente balsámico y pungente debido al mentol.</li>
             </ul>
 
             <h3 class="font-bold mb-2">Preparación</h3>
@@ -250,14 +286,17 @@ const recipes = {
     },
 
     samay: {
-        title: "SAMAY",
+        title: "Blend SAMAY (Descanso / Paz) — Receta",
         content: `
+            <p class="font-bold">Perfil: Relajante profundo, dulce-gourmet y sedante suave.</p>
             <h3 class="font-bold mb-2">Ingredientes</h3>
             <ul class="list-disc ml-5 mb-4">
-                <li>Menta</li>
-                <li>Poleo</li>
-                <li>Burrito</li>
-            </ul>
+                <li>Melisa: Aporta una base herbácea con un aroma alimonado muy suave y delicado. Actúa como el principal vehículo para aliviar la tensión y el estrés cotidiano.</li>
+                <li>Pasionaria: Aporta la estructura medicinal del blend. Sus hojas y flores deshidratadas entregan notas verdes sutiles y son reconocidas por su potente efecto ansiolítico natural.</li>
+                <li>Escamas de Coco: Es el diferenciador gourmet. Al infundirse, libera aceites esenciales que aportan un aroma láctico y dulce, dando una sensación de cremosidad y cuerpo en boca que tapa el sabor típicamente "amargo" de los yuyos relajantes.</li>
+                <li>Valeriana: Aporta el núcleo de relajación física profunda (acción sobre el sistema nervioso). Al ser una raíz, aporta notas terrosas de fondo que se equilibran perfectamente con el coco.</li>
+                <li>Manzanilla o Tiló: Aporta delicadeza floral, un color amarillo brillante a la taza y notas dulzonas que recuerdan a la manzana, cerrando el perfil relajante.</li>
+                </ul>
 
             <h3 class="font-bold mb-2">Preparación</h3>
             <p>
@@ -267,14 +306,16 @@ const recipes = {
         `
     },
     huyun: {
-        title: "HUYUN",
+        title: "HUYUN (Lluvia) — Total: 100g",
         content: `
+            <p class="font-bold">Perfil: Balsámico, sumamente refrescante, limpio y estimulante.</p>
             <h3 class="font-bold mb-2">Ingredientes</h3>
             <ul class="list-disc ml-5 mb-4">
-                <li>Manzanilla</li>
-                <li>Melisa</li>
-                <li>Cedrón</li>
-            </ul>
+                <li>Poleo: Funciona como la gran base de la flora nativa regional. Aporta un perfil herbáceo resinoso, un aroma intenso que recuerda al campo húmedo y propiedades tónicas estomacales.</li>
+                <li>Menta: Es el ingrediente que define el concepto de "Lluvia". Su alto contenido de mentol aporta una sensación térmica de frío instantáneo en la garganta, abriendo las vías respiratorias y refrescando el paladar.</li>
+                <li>Cedrón: Rompe la hegemonía mentolada con un toque de acidez cítrica, otorgando balance y ligereza al blend.</li>
+                <li>Manzanilla: Aporta un sutil contrapeso dulce y floral para que las notas balsámicas del poleo y la menta no resulten invasivas, suavizando la experiencia general en la taza.</li>
+                </ul>
 
             <h3 class="font-bold mb-2">Preparación</h3>
             <p>
@@ -328,6 +369,12 @@ document.getElementById("modal").addEventListener("click", function (e) {
 
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    AOS.init({
+        once: true,
+        duration: 1000
+    });
+});
 </script>
 </body>
 </html>
