@@ -167,20 +167,44 @@ class="absolute right-4 top-1/2 z-30 -translate-y-1/2 bg-black/50 hover:bg-black
 
 
 <div id="modal"
-    class="hidden fixed inset-0 bg-black/50 z-50 items-center justify-center">
-    <div id="modalContent"
-    class="bg-white text-black rounded-xl p-6 max-w-lg mx-4 relative shadow-2xl
-    opacity-0 scale-95 translate-y-4 transition-all duration-300">
+    class="hidden fixed inset-0 bg-black/50 z-50 items-center justify-center p-4">
 
-        <button onclick="closeModal()"
+    <div id="modalContent"
+        class="
+        bg-white/95
+        backdrop-blur-sm
+        text-black
+        rounded-xl
+        p-6
+        max-w-2xl
+        w-full
+        mx-4
+        relative
+        shadow-2xl
+        max-h-[85vh]
+        overflow-y-auto
+        opacity-0
+        scale-95
+        translate-y-4
+        transition-all
+        duration-300
+        ">
+
+        <button
+            onclick="closeModal()"
             class="absolute top-3 right-4 text-2xl font-bold hover:text-red-500 transition">
             ×
         </button>
-    
-        <h2 id="recipeTitle" class="text-2xl font-bold mb-4"></h2>
+
+        <h2
+            id="recipeTitle"
+            class="text-2xl font-bold mb-4 pr-8">
+        </h2>
+
         <div id="recipeContent"></div>
-    
+
     </div>
+
 </div>
 </div>
 </section>
@@ -226,7 +250,7 @@ const recipes = {
         <img
             src="img/blends/checu.png"
             alt="Blend Xumec"
-            class="w-full max-h-72 object-contain rounded-xl mb-4"
+            class="w-full h-auto max-h-80 object-contain rounded-xl mb-4 mx-auto"
         >
             <p class="font-bold">Perfil: Combina el color rojo intenso de la jamaica, el perfume de la canela, la cremosidad del coco y el cuerpo del té rojo para crear una experiencia de bienestar dulce, frutada y estimulante.</p>
             <h3 class="font-bold mb-2">Ingredientes</h3>
@@ -251,7 +275,7 @@ const recipes = {
         <img
             src="img/blends/xumec.png"
             alt="Blend Xumec"
-            class="w-full max-h-72 object-contain rounded-xl mb-4"
+            class="w-full h-auto max-h-80 object-contain rounded-xl mb-4 mx-auto"
         >
         <p class="font-bold">Perfil: Cítrico, fresco, equilibrado y de tonos dorados muy vistosos.</p>
             <h3 class="font-bold mb-2">Ingredientes</h3>
@@ -276,7 +300,7 @@ const recipes = {
         <img
             src="img/blends/teken.png"
             alt="Blend Xumec"
-            class="w-full max-h-72 object-contain rounded-xl mb-4"
+            class="w-full h-auto max-h-80 object-contain rounded-xl mb-4 mx-auto"
         >
             <p class="font-bold"> Perfil: bomba de frescura autóctona y serrana, elegante y de gran equilibrio.</p>
             <h3 class="font-bold mb-2">Ingredientes</h3>
@@ -301,7 +325,7 @@ const recipes = {
         <img
             src="img/blends/samay.png"
             alt="Blend Xumec"
-            class="w-full max-h-72 object-contain rounded-xl mb-4"
+            class="w-full h-auto max-h-80 object-contain rounded-xl mb-4 mx-auto"
         >
             <p class="font-bold">Perfil: Relajante profundo, dulce-gourmet y sedante suave.</p>
             <h3 class="font-bold mb-2">Ingredientes</h3>
@@ -325,7 +349,7 @@ const recipes = {
         <img
             src="img/blends/huyun.png"
             alt="Blend Xumec"
-            class="w-full max-h-72 object-contain rounded-xl mb-4"
+            class="w-full h-auto max-h-80 object-contain rounded-xl mb-4 mx-auto"
         >
             <p class="font-bold">Perfil: Balsámico, sumamente refrescante, limpio y estimulante.</p>
             <h3 class="font-bold mb-2">Ingredientes</h3>
