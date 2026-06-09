@@ -22,7 +22,7 @@
         <li class="hover:scale-105 transition duration-500"><a class="p-2 hover:scale-105 hover:bg-[#F5EFDD] hover:text-black xl:text-2xl" href="index.html">INICIO</a></li>
         <li class="hover:scale-105 transition duration-500"><a class="p-2 hover:scale-105 hover:bg-[#F5EFDD] hover:text-black xl:text-2xl" href="productos.html">PRODUCTOS</a></li>
         <li class="hover:scale-105 transition duration-500"><a class="p-2 hover:scale-105 hover:bg-[#F5EFDD] hover:text-black xl:text-2xl" href="contacto.html">CONTACTO</a></li>
-        <li class="hover:scale-105 transition duration-500"><a class="p-2 hover:scale-105 hover:bg-[#F5EFDD] hover:text-black xl:text-2xl" href="#">QUIENES SOMOS</a></li>
+        <li class="hover:scale-105 transition duration-500"><a class="p-2 hover:scale-105 hover:bg-[#F5EFDD] hover:text-black xl:text-2xl" href="quienessomos.html">QUIENES SOMOS</a></li>
     </ul>
 </nav>
 </header>
@@ -89,10 +89,10 @@
             </a>
         </div>
         <div class="inline-block text-center hover:scale-105 transition-transform p-1 bg-black/10 rounded-lg">
-            <a href="prosas.html">
-                <img class="mx-auto w-64 h-48 object-cover rounded-sm xl:max-h-100" src="img/rosamosqueta.png" alt="Rosa Mosqueta">
-                <h1 class="mt-2 text-lg">ROSA MOSQUETA</h1>
-                <p>Menta de alta calidad con aroma intenso y sabor fresco para infusiones y blends.</p>
+            <a href="pquinchamali.html">
+                <img class="mx-auto w-64 h-48 object-cover rounded-sm xl:max-h-100" src="img/quinchamali.jpg" alt="Quinchamalí">
+                <h1 class="mt-2 text-lg">QUINCHAMALÍ</h1>
+                <p>Su sabor suave en una excelente opción para infusiones naturales y blends herbales.</p>
             </a>
         </div>
     </div>
@@ -110,28 +110,33 @@
 <section class="mt-10 p-5 mb-10">
 <div class="text-center">
     <h1 class="text-2xl">
-        IDEAS DE PREPARACION
+        BLENDS PREMIUM
     </h1>
     <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-4 mt-5">
     
-<button onclick="showRecipe('menta')" class="group relative overflow-hidden rounded-xl bg-black/5 py-5 px-4 text-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:bg-[#7C748D]/50">
+<button onclick="showRecipe('checu')" class="group relative overflow-hidden rounded-xl bg-black/5 py-5 px-4 text-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:bg-[#7C748D]/50">
     <span class="absolute top-0 -left-1/2 h-full w-1/3 skew-x-12 bg-gradient-to-r from-transparent via-white/100 to-transparent transition-all duration-700 group-hover:left-[140%]"></span>
-    <span class="relative z-10 transition-colors duration-500 group-hover:text-white">Menta Refrescante</span>
+    <span class="relative z-10 transition-colors duration-500 group-hover:text-white">CHECÚ</span>
 </button>
 
-<button onclick="showRecipe('citrico')" class="group relative overflow-hidden rounded-xl bg-black/5 py-5 px-4 text-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:bg-[#7C748D]/50">
+<button onclick="showRecipe('xumec')" class="group relative overflow-hidden rounded-xl bg-black/5 py-5 px-4 text-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:bg-[#7C748D]/50">
     <span class="absolute top-0 -left-1/2 h-full w-1/3 skew-x-12 bg-gradient-to-r from-transparent via-white/100 to-transparent transition-all duration-700 group-hover:left-[140%]"></span>
-    <span class="relative z-10 transition-colors duration-500 group-hover:text-white">Mate Cítrico</span>
+    <span class="relative z-10 transition-colors duration-500 group-hover:text-white">XUMEC</span>
 </button>
 
-<button onclick="showRecipe('relax')" class="group relative overflow-hidden rounded-xl bg-black/5 py-5 px-4 text-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:bg-[#7C748D]/50">
+<button onclick="showRecipe('teken')" class="group relative overflow-hidden rounded-xl bg-black/5 py-5 px-4 text-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:bg-[#7C748D]/50">
     <span class="absolute top-0 -left-1/2 h-full w-1/3 skew-x-12 bg-gradient-to-r from-transparent via-white/100 to-transparent transition-all duration-700 group-hover:left-[140%]"></span>
-    <span class="relative z-10 transition-colors duration-500 group-hover:text-white">Infusión Relax</span>
+    <span class="relative z-10 transition-colors duration-500 group-hover:text-white">TEKEN</span>
 </button>
 
-<button onclick="showRecipe('digestivo')" class="group relative overflow-hidden rounded-xl bg-black/5 py-5 px-4 text-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:bg-[#7C748D]/50">
+<button onclick="showRecipe('samay')" class="group relative overflow-hidden rounded-xl bg-black/5 py-5 px-4 text-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:bg-[#7C748D]/50">
     <span class="absolute top-0 -left-1/2 h-full w-1/3 skew-x-12 bg-gradient-to-r from-transparent via-white/100 to-transparent transition-all duration-700 group-hover:left-[140%]"></span>
-    <span class="relative z-10 transition-colors duration-500 group-hover:text-white">Blend Digestivo</span>
+    <span class="relative z-10 transition-colors duration-500 group-hover:text-white">SAMAY</span>
+</button>
+
+<button onclick="showRecipe('huyun')" class="group relative overflow-hidden rounded-xl bg-black/5 py-5 px-4 text-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:bg-[#7C748D]/50">
+    <span class="absolute top-0 -left-1/2 h-full w-1/3 skew-x-12 bg-gradient-to-r from-transparent via-white/100 to-transparent transition-all duration-700 group-hover:left-[140%]"></span>
+    <span class="relative z-10 transition-colors duration-500 group-hover:text-white">HUYUN</span>
 </button>
 </div>
 
@@ -190,8 +195,8 @@ setInterval(() => {
 
 const recipes = {
 
-    menta: {
-        title: "🌿 Menta Refrescante",
+    checu: {
+        title: "CHECÚ",
         content: `
             <h3 class="font-bold mb-2">Ingredientes</h3>
             <ul class="list-disc ml-5 mb-4">
@@ -208,8 +213,8 @@ const recipes = {
         `
     },
 
-    citrico: {
-        title: "🍋 Mate Cítrico",
+    xumec: {
+        title: "XUMEC",
         content: `
             <h3 class="font-bold mb-2">Ingredientes</h3>
             <ul class="list-disc ml-5 mb-4">
@@ -226,8 +231,8 @@ const recipes = {
         `
     },
 
-    relax: {
-        title: "🌼 Infusión Relax",
+    teken: {
+        title: "TEKEN",
         content: `
             <h3 class="font-bold mb-2">Ingredientes</h3>
             <ul class="list-disc ml-5 mb-4">
@@ -244,8 +249,8 @@ const recipes = {
         `
     },
 
-    digestivo: {
-        title: "🌱 Blend Digestivo",
+    samay: {
+        title: "SAMAY",
         content: `
             <h3 class="font-bold mb-2">Ingredientes</h3>
             <ul class="list-disc ml-5 mb-4">
@@ -260,7 +265,24 @@ const recipes = {
                 Ideal para acompañar después de las comidas.
             </p>
         `
-    }
+    },
+    huyun: {
+        title: "HUYUN",
+        content: `
+            <h3 class="font-bold mb-2">Ingredientes</h3>
+            <ul class="list-disc ml-5 mb-4">
+                <li>Manzanilla</li>
+                <li>Melisa</li>
+                <li>Cedrón</li>
+            </ul>
+
+            <h3 class="font-bold mb-2">Preparación</h3>
+            <p>
+                Colocar las hierbas en agua caliente y dejar reposar
+                durante 5 minutos. Ideal para momentos de descanso.
+            </p>
+        `
+    },
 
 };
 
